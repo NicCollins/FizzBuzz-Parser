@@ -22,13 +22,22 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Created by NCollins on 12/4/2014.
+ * Created by ncollins on 2/5/2015.
  */
-public class Console {
-    public static void main(String[] args) throws IOException {
-        //Initialize needed classes
-        Pages consolePages = new Pages();
-        
-        String choice = consolePages.options();
+public class Pages {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    
+    public String options() throws IOException {
+        System.out.println("                   Fizz Buzz Variant Solver");
+        System.out.println("================================================================");
+        System.out.println("This application will solve any Fizz Buzz variant you can create");
+        System.out.println();
+        System.out.println("Please choose one of the following options:");
+        System.out.println("1) Standard FizzBuzz");
+        System.out.println("2) Israeli FizzBuzz Variant");
+        System.out.println("3) Custom Variant");
+        System.out.print("Selection: ");
+        return br.readLine();
     }
+    
 }
