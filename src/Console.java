@@ -20,6 +20,8 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by NCollins on 12/4/2014.
@@ -29,6 +31,28 @@ public class Console {
         //Initialize needed classes
         Pages consolePages = new Pages();
         
-        String choice = consolePages.options();
+        String choice = "";
+        String rules = "";
+        
+        while (choice != null) {
+            switch (choice) {
+                case "1":
+                    break;
+                case "2":
+                    break;
+                case "3":
+                    rules = consolePages.ruleBuilder();
+                    choice = "5";
+                    break;
+                case "4":
+                    choice = null;
+                    break;
+                case "5":
+                    break;
+                default:
+                    choice = consolePages.options();
+                    break;
+            }
+        }
     }
 }

@@ -20,6 +20,8 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by ncollins on 2/5/2015.
@@ -28,7 +30,8 @@ public class Pages {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     
     public String options() throws IOException {
-        System.out.println("                   Fizz Buzz Variant Solver");
+        System.out.println("================================================================");
+        System.out.println("|                  Fizz Buzz Variant Solver                    |");
         System.out.println("================================================================");
         System.out.println("This application will solve any Fizz Buzz variant you can create");
         System.out.println();
@@ -36,8 +39,30 @@ public class Pages {
         System.out.println("1) Standard FizzBuzz");
         System.out.println("2) Israeli FizzBuzz Variant");
         System.out.println("3) Custom Variant");
+        System.out.println("4) Exit Program");
         System.out.print("Selection: ");
         return br.readLine();
     }
     
+    public String ruleBuilder() throws IOException {
+        System.out.println("================================================================");
+        System.out.println("|                   Fizz Buzz Rules Builder                    |");
+        System.out.println("================================================================");
+        System.out.println("First please select the rule building style you would like to use");
+        System.out.println("1) Full sentences will be parsed and you can confirm the rule");
+        System.out.println("2) The rule will be built from Number, Comparator, and Action");
+        System.out.println("Selection: ");
+        String parseSelect = br.readLine();
+        
+        switch (parseSelect) {
+            case "1":
+                break;
+            case "2":
+                break;
+            default:
+                break;
+        }
+        
+        return "";
+    }
 }
