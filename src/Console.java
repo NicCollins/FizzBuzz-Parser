@@ -17,11 +17,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by NCollins on 12/4/2014.
@@ -41,13 +37,18 @@ public class Console {
                 case "2":
                     break;
                 case "3":
-                    rules = consolePages.ruleBuilder();
-                    choice = "5";
+                    choice = consolePages.ruleBuilderOptions();
                     break;
                 case "4":
                     choice = null;
                     break;
                 case "5":
+                    rules = consolePages.ruleBuilderSentence();
+                    break;
+                case "6":
+                    rules = consolePages.ruleBuilderArray();
+                    break;
+                case "7":
                     break;
                 default:
                     choice = consolePages.options();

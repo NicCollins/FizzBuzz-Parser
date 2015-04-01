@@ -44,7 +44,7 @@ public class Pages {
         return br.readLine();
     }
     
-    public String ruleBuilder() throws IOException {
+    public String ruleBuilderOptions() throws IOException {
         System.out.println("================================================================");
         System.out.println("|                   Fizz Buzz Rules Builder                    |");
         System.out.println("================================================================");
@@ -56,13 +56,21 @@ public class Pages {
         
         switch (parseSelect) {
             case "1":
-                break;
+                return "5";
             case "2":
-                break;
+                return "6";
             default:
                 break;
         }
         
-        return "";
+        return "7";
+    }
+
+    public String ruleBuilderSentence() {
+        return null;
+    }
+
+    public String ruleBuilderArray() {
+        return null;
     }
 }
