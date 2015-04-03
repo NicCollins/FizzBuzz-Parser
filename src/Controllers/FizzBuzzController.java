@@ -19,8 +19,19 @@
 
 package Controllers;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Created by ncollins on 4/2/2015.
  */
 public class FizzBuzzController {
+    private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    
+    public String userInput() throws IOException {
+        return br.readLine();        
+    }
+    
+    
 }

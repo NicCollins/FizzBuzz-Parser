@@ -18,6 +18,8 @@
  */
 
 import AppData.FizzBuzzRule;
+import Business.FizzBuzzBusiness;
+import Controllers.FizzBuzzController;
 
 import java.io.IOException;
 import java.util.List;
@@ -28,35 +30,14 @@ import java.util.List;
 public class Console {
     public static void main(String[] args) throws IOException {
         //Initialize needed classes
-        Pages consolePages = new Pages();
+        FizzBuzzBusiness fizzBuzzBusiness = new FizzBuzzBusiness();
+        FizzBuzzController fizzBuzzController = new FizzBuzzController();
         
         String choice = "";
-        List<FizzBuzzRule> rules;
         
         while (choice != null) {
-            switch (choice) {
-                case "1":
-                    break;
-                case "2":
-                    break;
-                case "3":
-                    choice = consolePages.ruleBuilderOptions();
-                    break;
-                case "4":
-                    choice = null;
-                    break;
-                case "5":
-                    rules = consolePages.ruleBuilderSentence();
-                    break;
-                case "6":
-                    rules = consolePages.ruleBuilderArray();
-                    break;
-                case "7":
-                    break;
-                default:
-                    choice = consolePages.options();
-                    break;
-            }
+            fizzBuzzBusiness.getView(choice);
+            choice = fizzBuzzController.userInput();
         }
     }
 }

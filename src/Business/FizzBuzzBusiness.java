@@ -17,37 +17,40 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-package AppData;
+package Business;
+
+import Views.OptionsView;
+import Views.RuleBuilderView;
+
+import java.io.IOException;
 
 /**
  * Created by ncollins on 4/2/2015.
  */
-public class FizzBuzzRule {
-    private String action;
-    private String comparator;
-    private int number;
-    
-    public void setAction(String actionParam){
-        action = actionParam;        
-    }
-    
-    public void setComparator(String comparatorParam){
-        comparator = comparatorParam;        
-    }
-    
-    public void setNumber(int numberParam){
-        number = numberParam;
-    }
-    
-    public String getAction(){
-        return action;        
-    }
-    
-    public String getComparator(){
-        return comparator;        
-    }
-    
-    public int getNumber(){
-        return number;
+public class FizzBuzzBusiness {
+    public void getView(String choice) throws IOException {
+        switch (choice) {
+            case "1":
+                break;
+            case "2":
+                break;
+            case "3":
+                new RuleBuilderView();
+                break;
+            case "4":
+                //choice = null;
+                break;
+            case "5":
+                //rules = consolePages.ruleBuilderSentence();
+                break;
+            case "6":
+                //rules = consolePages.ruleBuilderArray();
+                break;
+            case "7":
+                break;
+            default:
+                new OptionsView();
+                break;
+        }
     }
 }
