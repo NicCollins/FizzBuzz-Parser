@@ -17,7 +17,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+import AppData.FizzBuzzRule;
+
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by NCollins on 12/4/2014.
@@ -28,7 +31,7 @@ public class Console {
         Pages consolePages = new Pages();
         
         String choice = "";
-        String rules = "";
+        List<FizzBuzzRule> rules;
         
         while (choice != null) {
             switch (choice) {

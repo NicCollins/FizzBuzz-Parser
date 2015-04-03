@@ -17,10 +17,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+import AppData.FizzBuzzRule;
+import Views.OptionsView;
+import Views.RuleBuilderView;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -30,28 +35,12 @@ public class Pages {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     
     public String options() throws IOException {
-        System.out.println("================================================================");
-        System.out.println("|                  Fizz Buzz Variant Solver                    |");
-        System.out.println("================================================================");
-        System.out.println("This application will solve any Fizz Buzz variant you can create");
-        System.out.println();
-        System.out.println("Please choose one of the following options:");
-        System.out.println("1) Standard FizzBuzz");
-        System.out.println("2) Israeli FizzBuzz Variant");
-        System.out.println("3) Custom Variant");
-        System.out.println("4) Exit Program");
-        System.out.print("Selection: ");
+        new OptionsView();
         return br.readLine();
     }
     
     public String ruleBuilderOptions() throws IOException {
-        System.out.println("================================================================");
-        System.out.println("|                   Fizz Buzz Rules Builder                    |");
-        System.out.println("================================================================");
-        System.out.println("First please select the rule building style you would like to use");
-        System.out.println("1) Full sentences will be parsed and you can confirm the rule");
-        System.out.println("2) The rule will be built from Number, Comparator, and Action");
-        System.out.println("Selection: ");
+        new RuleBuilderView();
         String parseSelect = br.readLine();
         
         switch (parseSelect) {
@@ -60,17 +49,15 @@ public class Pages {
             case "2":
                 return "6";
             default:
-                break;
+                return "3";
         }
-        
-        return "7";
     }
 
-    public String ruleBuilderSentence() {
+    public List<FizzBuzzRule> ruleBuilderSentence() {
         return null;
     }
 
-    public String ruleBuilderArray() {
+    public List<FizzBuzzRule> ruleBuilderArray() {
         return null;
     }
 }
